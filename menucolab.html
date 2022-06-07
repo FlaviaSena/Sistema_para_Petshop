@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrativo - Perfil de colaborador - PetShop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ 
+    <!--Aplicações CSS-->
+<style>
+
+
+ .slider{
+        overflow: hidden;
+    
+    }
+    .slider > .slider-content{
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        transition: all 500ms ease;
+    
+    }
+    
+    .slider > .slider-content > .slider-item {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    
+    .slider > input:nth-child(1):checked ~ .slider-content{
+        transform: translateX(0%);
+    }
+    
+    .slider > input:nth-child(2):checked ~ .slider-content{
+        transform: translateX(-100%);
+    }
+    .slider > input:nth-child(3):checked ~ .slider-content{
+        transform: translateX(-200%);
+    }
+    
+    .slider > input:nth-child(4):checked ~ .slider-content{
+        transform: translateX(-300%);
+    }
+ 
+   img{
+    height: 700px;
+    width: 100%;
+
+   }
+   div.container-fluid{
+    background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,45,45,0.1431706460674157) 51%);
+
+   }
+</style>
+</head>
+<body>
+    <!--Cabeçalho-->
+    <div id="header">
+
+    <!--INÍCIO DO MENU ADMINISTRATIVO DO COLABORADOR-->
+    <nav class="navbar navbar-expand-lg navbar-primary bg-light">
+
+
+        <!--ÍCONE DA BARRA DE NAVEGAÇÃO DO PORTAL-->
+        <div class="container-fluid">
+            
+            <a class="navbar-brand" href="menucolab.html"><i> Desenvolvido em 2022 no Curso Técnico em Informática do SENAC RIO</i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+            <!--OPÇÕES DO MENU-->
+            <div  class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+
+                <!--OPÇÃO 1-->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>Corporativo</b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+
+                            <li>
+                                <a class="dropdown-item" href="cadastrocolab.php">Cadastrar colaboradores</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="listageralcolab.php">Lista geral de colaboradores</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="pesquisarcolab.php"><br>Pesquisa refinada de colaboradores</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!--OPÇÃO 2-->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>Clientes</b>
+                        </a>
+
+                        <!--LISTA DENTRO DAS OPÇÕES DO MENU-->
+                        <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="cadastrocli.php">Cadastrar clientes</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="listageralcli.php">Lista geral de clientes</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="pesquisarcli.php">Pesquisa refinada de clientes</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="cadastropet.php">Cadastrar pets</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="listageralpet.php">Lista geral de pets</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="pesquisarpet.php">Pesquisa refinada de pets</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!--OPÇÃO 3-->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>Serviços</b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Banho e tosa</a></li>
+                            <li><a class="dropdown-item" href="#">Veterinário</a></li>
+                            <li><a class="dropdown-item" href="#">Consultas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <!--carrossel de fotos menu-->
+    <section class="slider">
+        <input name='slide' type="radio" checked>
+        <input name='slide' type="radio">
+        <input name='slide' type="radio">
+    
+        <div class="slider-content">
+            <div class="slider-item"><img src="img/inicial5.webp" alt=""></img></div>
+            <div class="slider-item"><img src="img/inicial2.jpg" alt=""></img></div>
+            <div class="slider-item"><img src="img/inicial4.webp" alt=""></img></div>
+        </div>
+    </section>
+
+</body>
+</html>
